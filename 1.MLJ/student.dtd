@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+mo ta cau truc ho so sinh vien.
+moi sinh vien bao gom cac fields: 
+    ho ten, nam sinh, gioi tinh, trung tam 
+va thuoc tinh ma so (duy nhat) cua sinh vien
+-->
+
+<!ELEMENT student-list (student+)>
+<!ELEMENT student (fullname, yob, gender, center)>
+<!ELEMENT fullname (#PCDATA)>
+<!ELEMENT yob (#PCDATA)>
+<!ELEMENT gender (#PCDATA)>
+<!ELEMENT center (#PCDATA)>
+<!ATTLIST student id ID #REQUIRED>
+<!ATTLIST center name (Aptech|Arena) #REQUIRED>
+

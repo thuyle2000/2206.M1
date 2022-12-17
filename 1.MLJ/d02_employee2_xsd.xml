@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ho so nhan vien
+-->
+
+<employee-list
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='employee2.xsd'>
+    <employee id="NV1000">
+        <name>Cat tuong</name>
+        <gender>false</gender>
+        <dob>2003-08-31</dob>
+        <salary>1200</salary>
+        <position>nhan vien</position>
+    </employee>
+    
+    <employee id="NV1001">
+        <name>An</name>
+        <gender>true</gender>
+        <dob>2000-12-31</dob>
+        <salary>10000</salary>
+        <position>truong phong</position>
+    </employee>
+    
+    <employee id="NV1002">
+        <name>Phuoc tho</name>
+        <gender>true</gender>
+        <dob>2004-06-22</dob>
+        <salary>1</salary>
+        <position>giam doc</position>
+    </employee>
+
+</employee-list>
+

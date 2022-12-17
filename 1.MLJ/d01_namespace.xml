@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ho so nhan su trong 1 truong hoc, bao gom 
+nhan vien, hoc vien va giao vien (id, ten, email, gioi tinh)
+-->
+<person-doc xmlns="http://student.fe.edu"
+            xmlns:nv="http://employee.fe.edu"
+            xmlns:gv="http://falcuty.fe.edu"
+>
+    <person>
+        <id>p01</id>
+        <name>cat tuong</name>
+        <email>tuong@gmail.com</email>
+        <gender>nu</gender>
+    </person>
+    <person>
+        <id>p02</id>
+        <name>an khanh</name>
+        <email>khanh@hotmail.com</email>
+        <gender>nam</gender>
+    </person>
+    <person xmlns="http://student-aptech.fe.edu">
+        <id>p03</id>
+        <name>van an</name>
+        <email>an@fpt.edu.vn</email>
+        <gender>nam</gender>
+    </person>
+    
+    <nv:person>
+        <nv:id>p04</nv:id>
+        <nv:name>bich ngoc</nv:name>
+        <nv:email>ngoc@fpt.edu.vn</nv:email>
+        <nv:gender>nu</nv:gender>
+    </nv:person>
+    
+    <gv:person>
+        <gv:id>p05</gv:id>
+        <gv:name>tuan cat</gv:name>
+        <gv:email>tuan@fpt.edu.vn</gv:email>
+        <gv:gender>nam</gv:gender>
+    </gv:person>
+</person-doc>
+

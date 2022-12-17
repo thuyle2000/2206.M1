@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ho so sinh vien.
+moi sinh vien bao gom cac fields: ma so, ho ten, nam sinh, gioi tinh va thuoc tinh tinh trang
+-->
+
+<!--
+Phan mo ta cau truc du lieu theo chuan internal DTD
+-->
+<!DOCTYPE student-list [
+    <!ELEMENT student-list (student+)>
+    <!ELEMENT student (id, fullname, yob, gender, center)>
+    <!ELEMENT id (#PCDATA)>
+    <!ELEMENT fullname (#PCDATA)>
+    <!ELEMENT yob (#PCDATA)>
+    <!ELEMENT gender (#PCDATA)>
+    <!ELEMENT center (#PCDATA)>
+    <!ATTLIST student status CDATA #REQUIRED>
+    
+    <!ENTITY hn "Ha noi">
+    <!ENTITY sg "Saigon">
+    <!ENTITY dn "Da nang">
+]>
+
+<student-list>
+    <student status='true'>
+        <id>s1</id>
+        <fullname>Cat Tuong</fullname>
+        <yob>2000</yob>
+        <gender>nu</gender>
+        <center>
+            &hn;
+        </center>
+    </student>
+    
+    <student status="true">
+        <id>s2</id>
+        <fullname>Van An</fullname>
+        <yob>2002</yob>
+        <gender>nam</gender>
+        <center>&sg;</center>
+    </student>
+    
+    <student status="false">
+        <id>s3</id>
+        <fullname>An Khanh</fullname>
+        <yob>2000</yob>
+        <gender>nam</gender>
+        <center>&sg;</center>
+    </student>
+    
+    <student status="true">
+        <id>s4</id>
+        <fullname>Hai Dang</fullname>
+        <yob>2001</yob>
+        <gender>nam</gender>
+        <center>&dn;</center>
+    </student>
+    
+</student-list>
+

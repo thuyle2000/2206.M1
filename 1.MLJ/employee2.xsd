@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!--
+mo ta cau truc ho so nhan vien
+moi nhan vien bao gom :
+- thuoc tinh id (chuoi ky tu, co dinh dang NVxxxx, x la ky so) 
+- du lieu:
+     ho ten (chuoi, it nhat 2 ky tu)
+     gioi tinh (boolean) 
+     ngay sinh (date)
+     luong (so nguyen, tu 0-100000)
+     chuc vu (chuoi [nhanvien, truong phong, giam doc])
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    
+    <!--    dinh nghia kieu du lieu [personInfo]-->
+    <xs:complexType name="personInfo">
+        <xs:sequence>
+            <xs:element name="name" type="name-type" />
+            <xs:element name="gender" type="xs:boolean" />
+            <xs:element name="dob" type="xs:date" />
+            <xs:element name="salary" type="salary-type" />
+            <xs:element name="position" type="position-type" />
+        </xs:sequence>
+        <xs:attribute name="id" type="ID-type" />
+    </xs:complexType>
+    
+    
+    <!--    dinh nghia root node cua ho so nhan vien -->
+    <xs:element name="employee-list">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="employee" 
+                            type="personInfo"
+                            minOccurs="3"
+                            maxOccurs="unbounded"  />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    
+    <!-- dinh nghia kieu du lieu ID, chuoi co dinh dang NVxxxx, x la ky so-->
+    <xs:simpleType name="ID-type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="NV\d{4}" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    
+    <!--dinh nghia kieu du lieu ho ten, chuoi: it nhat 2 ky tu-->
+    <xs:simpleType name="name-type">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="2" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <!-- dinh nghia kieu du muc luong, so nguyen, tu 0-100000-->
+    <xs:simpleType name="salary-type">
+        <xs:restriction base="xs:integer" >
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="100000" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+<!--dinh nghia kieu du lieu chuc vu, chuoi[nhanvien, truong phong, giam doc]-->
+    <xs:simpleType name="position-type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="nhan vien" />
+            <xs:enumeration value="truong phong" />
+            <xs:enumeration value="giam doc" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

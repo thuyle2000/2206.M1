@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!--
+mo ta cau truc ho so nhan vien
+moi nhan vien bao gom :
+- thuoc tinh id (chuoi ky tu)
+- du lieu:
+     ho ten (chuoi)
+     gioi tinh (boolean) 
+     ngay sinh (date)
+     luong (so nguyen)
+     chuc vu (chuoi)
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    
+    <!--    dinh nghia kieu du lieu [personInfo]-->
+    <xs:complexType name="personInfo">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" />
+            <xs:element name="gender" type="xs:boolean" />
+            <xs:element name="dob" type="xs:date" />
+            <xs:element name="salary" type="xs:integer" />
+            <xs:element name="position" type="xs:string" />
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" />
+    </xs:complexType>
+    
+    
+<!--    dinh nghia root node cua ho so nhan vien -->
+    <xs:element name="employee-list">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="employee" 
+                            type="personInfo"
+                            minOccurs="3"
+                            maxOccurs="unbounded"  />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+</xs:schema>

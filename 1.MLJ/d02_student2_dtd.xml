@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+<!DOCTYPE student-list SYSTEM 'student.dtd'
+[    
+    <!ENTITY hn "Ha noi">
+    <!ENTITY sg "Saigon">
+    <!ENTITY dn "Da nang">
+]
+>
+<student-list>
+    <student id="sv1">
+        <fullname>Cat Tuong</fullname>
+        <yob>2003</yob>
+        <gender> nu </gender>
+        <center name="Aptech">&hn;</center>
+    </student>
+    
+    <student id="sv2">
+        <fullname>Van An</fullname>
+        <yob>2004</yob>
+        <gender> nam </gender>
+        <center name="Arena"> &sg;</center>
+    </student>
+</student-list>
+
+
+

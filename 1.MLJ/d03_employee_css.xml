@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ho so nhan vien
+-->
+
+<employee-list>
+    <company>
+        <com-name>Cong ty TNHH ABC</com-name>
+        <com-add>590 CMT8, Q3. TPHCM</com-add>
+        <com-tel>123-456-7890</com-tel>
+    </company>
+    <department>
+        <dep-name>Accounting</dep-name>
+        <manager>Nguyen Trung Kien</manager>
+        
+        <employees>
+            <employee id="NV2000">
+                <name>Khai Vinh</name>
+                <gender>true</gender>
+                <dob>1999-08-31</dob>
+                <salary>2000</salary>
+                <position>nhan vien</position>
+            </employee>
+    
+            <employee id="NV2001">
+                <name>Trong Toan</name>
+                <gender>true</gender>
+                <dob>2001-12-31</dob>
+                <salary>1000</salary>
+                <position>nhan vien</position>
+            </employee>
+    
+            <employee id="NV2002">
+                <name>Hai Dang</name>
+                <gender>true</gender>
+                <dob>2001-06-22</dob>
+                <salary>5000</salary>
+                <position>truong phong</position>
+            </employee>    
+                   
+            <employee id="NV2003">
+                <name>Minh Quan</name>
+                <gender>true</gender>
+                <dob>1997-06-22</dob>
+                <salary>10000</salary>
+                <position>bao ve</position>
+            </employee>   
+             
+            <employee id="NV2005">
+                <name>Kim Hang</name>
+                <gender>false</gender>
+                <dob>2000-06-22</dob>
+                <salary>1</salary>
+                <position>Giam doc</position>
+            </employee>               
+        </employees>
+        
+        
+    </department>
+
+
+    <department>
+        <dep-name>Sales &amp; Marketing</dep-name>
+        <manager>Vu Duy Hien</manager>
+        
+        <employees>
+            <employee id="NV1000">
+                <name>Cat tuong</name>
+                <gender>false</gender>
+                <dob>2003-08-31</dob>
+                <salary>1200</salary>
+                <position>nhan vien</position>
+            </employee>
+    
+            <employee id="NV1001">
+                <name>An</name>
+                <gender>true</gender>
+                <dob>2000-12-31</dob>
+                <salary>10000</salary>
+                <position>truong phong</position>
+            </employee>
+    
+            <employee id="NV1002">
+                <name>Phuoc tho</name>
+                <gender>true</gender>
+                <dob>2004-06-22</dob>
+                <salary>1</salary>
+                <position>giam doc</position>
+            </employee>           
+            
+            
+        </employees>
+        
+        
+    </department>
+
+</employee-list>
+

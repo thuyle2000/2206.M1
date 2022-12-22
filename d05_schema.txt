@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema#",
+    "id": "http://json-schema.org/draft-03/schema#",
+    "title":"student",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "uniqueItems": true,
+            "default": "any",
+            "required":true
+        },
+        "name": {
+            "type": "string",
+            "description": "full name",
+             "required":true
+        },
+        "gender": {
+            "type": "boolean",
+            "description": "gender: male/female",
+            "default": true,
+            "required":true
+        },
+        "age": {
+            "type": "integer",
+            "minimum": 12,
+            "default": 18
+        },
+    }
+}

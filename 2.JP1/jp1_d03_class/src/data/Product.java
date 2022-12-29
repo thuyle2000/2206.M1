@@ -69,7 +69,7 @@ public class Product {
         
         Product p3 = new Product();
         p3.input();
-        System.out.println("San pham: " + p3);
+//        System.out.println("San pham: " + p3);
         p3.output();
         
     }
